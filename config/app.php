@@ -67,7 +67,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Africa/Nairobi',
 
     /*
     |--------------------------------------------------------------------------
@@ -168,6 +168,8 @@ return [
          */
         Collective\Html\HtmlServiceProvider::class,
 
+        Laravel\Socialite\SocialiteServiceProvider::class,
+
         /*
          * Application Service Providers...
          */
@@ -231,6 +233,8 @@ return [
         //Collectives
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\FormFacade::class,
+
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
 
     ],
 

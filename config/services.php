@@ -44,4 +44,18 @@ return [
         ],
     ],
 
+    'facebook' => [
+        'client_id' => env('FACEBOOK_APP_ID'), //USE FROM FACEBOOK DEVELOPER ACCOUNT
+        'client_secret' => env('FACEBOOK_APP_SECRET'), //USE FROM FACEBOOK DEVELOPER ACCOUNT
+        'redirect' => env('FACEBOOK_REDIRECT')
+    ],
+
+
+    'google' => [
+        'client_id' => env('GOOGLE_CLIENT_ID'), //USE FROM GOOGLE DEVELOPER ACCOUNT
+        'client_secret' => env('GOOGLE_CLIENT_SECRET'), //USE FROM GOOGLE DEVELOPER ACCOUNT
+        'redirect' => env('GOOGLE_REDIRECT'),
+        // 'https://examplelaravel8.test/facebook/callback/'
+    ],
+
 ];

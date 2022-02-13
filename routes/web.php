@@ -10,6 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+
 Route::get('/', function () {return view('welcome');});
 
 
@@ -78,6 +82,20 @@ Route::get('/companies','AddController@all')->name('companies');
 // Route::get('/list_adds_admin','AddController@show_admin_adds_all')->name('list packages');
 
 Route::post('/add_post',['uses'=>'AddController@create']);
+
+// Route::prefix('google')->name('google.')->group(
+//     function(){
+        Route::get('googlelogin', 'Auth\LoginController@loginWithGoogle')->name('googlelogin');
+        Route::any('googlecallback', 'Auth\LoginController@handleGoogleCallback')->name('googlecallback');
+//     }
+// );
+
+// Route::prefix('facebook')->name('facebook.')->group(
+//     function(){
+        Route::get('fblogin', 'Auth\LoginController@loginWithFacebook')->name('fblogin');
+        Route::any('fbcallback', 'Auth\LoginController@handleFacebookCallback')->name('fbcallback');
+//     }
+// );
 
 
 

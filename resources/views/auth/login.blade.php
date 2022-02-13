@@ -57,6 +57,15 @@
                                     {{ __('Login') }}
                                 </button>
 
+                                <hr>
+<!-- add btn-block to occupy all space -->
+                                <a href="{{ route('fblogin') }}" class="btn btn-social  btn-facebook  ">
+                                    <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
+                                </a>
+                                <a href="{{ route('googlelogin') }}" class="btn btn-social btn-google ">
+                                    <i class="fab fa-google fa-fw"></i> Login with Google
+                                </a>
+
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
